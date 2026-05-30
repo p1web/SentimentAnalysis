@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sentiment Analysis UI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>Sentiment Analysis</h1>
+    <p>Powered by OpenAI GPT-4o-mini, this tool analyzes text for positive, negative, or neutral sentiment and returns a concise confidence score and summary.</p>
+    <textarea id="text" placeholder="Type text to analyze" rows="6"></textarea>
+    <div class="controls">
+      <button id="analyze">Analyze</button>
+      <button id="clear">Clear</button>
+    </div>
+
+    <section id="result" class="hidden">
+      <h2>Result</h2>
+      <div id="resultMessage" class="result-message"></div>
+      <div class="result-row"><strong>Sentiment</strong><div id="resultSentiment" class="sentiment-badge"></div></div>
+      <div class="result-row"><strong>Score</strong><div id="resultScore"></div></div>
+      <div class="result-row"><strong>Confidence</strong><div id="resultConfidence"></div></div>
+      <div class="result-row"><strong>Summary</strong><div id="resultSummary"></div></div>
+    </section>
+
+    <footer>
+      <small>Sentiment API: POST /analyze</small>
+    </footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
