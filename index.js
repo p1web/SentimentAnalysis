@@ -51,7 +51,7 @@ app.post("/analyze", async (req, res) => {
       return res.status(500).json({ error: "OpenAI returned invalid JSON" });
     }
 
-    // ✅ Normalize response to always include required fields
+    //  Normalize response to always include required fields
     if (!result.sentiment || result.score === undefined || !result.confidence || !result.summary) {
       // fallback: derive sentiment from score
       const sentimentLabel = result.score > 0 ? "positive" : result.score < 0 ? "negative" : "neutral";
@@ -66,7 +66,7 @@ app.post("/analyze", async (req, res) => {
       };
     }
 
-    // ✅ Always return the same structure
+    // Always return the same structure
     res.json({
       text,
       sentiment: result.sentiment,
