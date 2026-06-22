@@ -1,11 +1,21 @@
+name: Deploy to Azure VM
+
+on:
+  push:
+    branches:
+      - master   # or your deployment branch
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
       ACTIONS_STEP_DEBUG: true
     steps:
+      # Checkout code
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      # Copy files to VM
       - name: Deploy to Azure VM via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -16,3 +26,5 @@ jobs:
             cd ~/projects/SimpleAiSolutions/SentimentAnalysis
             git pull origin master
             docker-compose up -d --build
+          env:
+            ACTIONS_STEP_DEBUG: true
