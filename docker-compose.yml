@@ -1,6 +1,7 @@
 services:
   sentimentanalysis:
     build: .
+    container_name: sentiment_app
     ports:
       - "3000:3000"
     volumes:
