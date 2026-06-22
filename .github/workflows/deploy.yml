@@ -26,6 +26,6 @@ jobs:
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
-            cd $DEPLOY_PATH
-            git pull origin $BRANCH
-            docker-compose up -d --build
+              cd ~/projects/SimpleAiSolutions/SentimentAnalysis
+              git pull origin master
+              docker-compose up -d --build
