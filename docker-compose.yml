@@ -7,4 +7,6 @@ services:
       - .:/usr/src/app
     env_file:
       - .env
+    environment:
+      - OPENAI_API_KEY=1sk-proj-0oF9uDGi4Z9sUd--ggsajsT6tuMLRPL4GHwjV9I3twDtnyiCggUpZKzAjaJh32Bljwuyk3kTYNT3BlbkFJWYoWyHiHWMZjCHyae4gSmWlQJZSh6dn7FmeSy3L7mFsVBz9Tkgms3pJNaQzcuEYGB_uiHqBDEAsk-proj-mDHUnK8OA1rEN5BfDSVJlmLmX8D7pqxnzurLR2wOH8zipd6fSLS5FRUm2u59Hugi6w5p-bPQAmT3BlbkFJAfxNyeToxio70A4bTmG_3HDLUb70xH5_oNmdAxjIyXF5e-gUVre1ESuPsd9e_Xs_gqGrNsJbgA
     restart: always
